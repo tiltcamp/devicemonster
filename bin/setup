@@ -11,3 +11,4 @@ fi
 cd "$(git rev-parse --show-toplevel)"
 asdf plugin add bun
 asdf install
+bun install
