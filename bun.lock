@@ -3,6 +3,9 @@
   "workspaces": {
     "": {
       "name": "devicemonster",
+    },
+    "agent": {
+      "name": "@devicemonster/agent",
       "devDependencies": {
         "@types/bun": "latest",
       },
@@ -12,6 +15,8 @@
     },
   },
   "packages": {
+    "@devicemonster/agent": ["@devicemonster/agent@workspace:agent"],
+
     "@types/bun": ["@types/bun@1.2.18", "", { "dependencies": { "bun-types": "1.2.18" } }, "sha512-Xf6RaWVheyemaThV0kUfaAUvCNokFr+bH8Jxp+tTZfx7dAPA8z9ePnP9S9+Vspzuxxx9JRAXhnyccRj3GyCMdQ=="],
 
     "@types/node": ["@types/node@24.0.10", "", { "dependencies": { "undici-types": "~7.8.0" } }, "sha512-ENHwaH+JIRTDIEEbDK6QSQntAYGtbvdDXnMXnZaZ6k13Du1dPMmprkEHIL7ok2Wl2aZevetwTAb5S+7yIF+enA=="],
