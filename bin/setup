@@ -8,10 +8,16 @@ if ! command -v asdf &> /dev/null; then
   exit 1
 fi
 
+if ! command -v direnv &> /dev/null; then
+  echo "direnv is not installed. Please install direnv to use the automated dev env setup script."
+  echo "https://direnv.net"
+  exit 1
+fi
+
 cd "$(git rev-parse --show-toplevel)"
 asdf plugin update bun || asdf plugin add bun
 asdf plugin update nodejs || asdf plugin add nodejs
 asdf install
 bun install
 
-lefthook install
+bun lefthook install

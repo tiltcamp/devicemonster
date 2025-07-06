@@ -1,11 +1,12 @@
 {
-  "name": "devicemonster",
-  "private": true,
-  "workspaces": [
-    "agent",
-    "server"
-  ],
-  "devDependencies": {
-    "lefthook": "^1.11.16"
-  }
+	"name": "devicemonster",
+	"devDependencies": {
+		"@biomejs/biome": "^2.0.6",
+		"lefthook": "^1.11.16"
+	},
+	"private": true,
+	"workspaces": [
+		"agent",
+		"server"
+	]
 }
