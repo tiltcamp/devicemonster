@@ -2,6 +2,7 @@
   "name": "devicemonster",
   "private": true,
   "workspaces": [
-    "agent"
+    "agent",
+    "server"
   ]
 }
