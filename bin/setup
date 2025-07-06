@@ -1,0 +1,13 @@
+#!/usr/bin/env sh -e
+
+# This script sets up the development environment for the project.
+
+if ! command -v asdf &> /dev/null; then
+  echo "asdf is not installed. Please install asdf to use the automated dev env setup script."
+  echo "https://asdf-vm.com"
+  exit 1
+fi
+
+cd "$(git rev-parse --show-toplevel)"
+asdf plugin add bun
+asdf install
