@@ -11,4 +11,10 @@ fi
 cd "$(git rev-parse --show-toplevel)"
 asdf plugin add bun
 asdf install
+
+# Lefthook depends on Node for its postinstall hook; this is a workaround:
+# https://github.com/evilmartians/lefthook/issues/688
+alias node=bun
 bun install
+
+lefthook install

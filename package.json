@@ -4,5 +4,8 @@
   "workspaces": [
     "agent",
     "server"
-  ]
+  ],
+  "devDependencies": {
+    "lefthook": "^1.11.16"
+  }
 }
