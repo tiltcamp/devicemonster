@@ -3,13 +3,20 @@
 	"include-v-in-tag": true,
 	"tag-separator": "@",
 	"separate-pull-requests": true,
+	"pull-request-title-pattern": "chore(${component}): release ${version}",
 	"packages": {
 		"agent": {
 			"path": "agent",
+			"bump-minor-pre-major": true,
+			"bump-patch-for-minor-pre-major": true,
+			"component-no-space": true,
 			"release-type": "node"
 		},
 		"server": {
 			"path": "server",
+			"bump-minor-pre-major": true,
+			"bump-patch-for-minor-pre-major": true,
+			"component-no-space": true,
 			"release-type": "node"
 		}
 	},
