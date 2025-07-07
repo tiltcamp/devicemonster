@@ -5,9 +5,13 @@
 		"@commitlint/cli": "^19.8.1",
 		"@commitlint/config-conventional": "^19.8.1",
 		"@commitlint/config-workspace-scopes": "^19.8.1",
+		"@onebeyond/license-checker": "^2.1.0",
 		"lefthook": "^1.11.16"
 	},
 	"private": true,
+	"scripts": {
+		"check-licenses": "license-checker --scan --disableReport --errorReportFileName incompatible-licenses --allowOnly MIT ISC Apache-2.0 BlueOak-1.0.0 BSD-3-Clause BSD-2-Clause Python-2.0 CC-BY-4.0 CC-BY-3.0 CC0-1.0 '(MIT AND CC-BY-3.0)' 0BSD"
+	},
 	"workspaces": [
 		"agent",
 		"server"

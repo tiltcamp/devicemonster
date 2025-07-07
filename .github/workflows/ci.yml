@@ -44,3 +44,29 @@ jobs:
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
         run: bun commitlint --from ${{ github.event.pull_request.base.sha }}
+  license-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - id: tool-versions
+        name: Get Tool Versions
+        run: |
+          for tool in $(cat .tool-versions | awk '{print $1}'); do
+            echo "$tool=$(grep "$tool" .tool-versions | awk '{print $2}')" >> $GITHUB_OUTPUT
+          done
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ steps.tool-versions.outputs.bun }}
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-modules-${{ hashFiles('**/bun.lock') }}
+      - name: Bun Install
+        run: bun install --frozen-lockfile
+      - name: Check licenses
+        run: bun check-licenses
+      - name: Output license check results
+        run: cat incompatible-licenses.md || echo "No incompatible licenses found."
