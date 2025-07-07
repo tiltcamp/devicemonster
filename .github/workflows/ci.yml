@@ -16,11 +16,14 @@ jobs:
           version: latest
       - name: Run Biome
         run: biome ci
+
   commitlint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - id: tool-versions
         name: Get Tool Versions
         run: |
@@ -43,7 +46,8 @@ jobs:
         run: bun commitlint --last --verbose
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
-        run: bun commitlint --from ${{ github.event.pull_request.base.sha }}
+        run: bun commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }}
+
   license-check:
     runs-on: ubuntu-latest
     steps:
