@@ -1,3 +1,9 @@
+commit-msg:
+  parallel: true
+  jobs:
+    - name: Commitlint
+      run: bun commitlint --edit {1}
+
 pre-commit:
   parallel: true
   jobs:
@@ -7,6 +13,7 @@ pre-commit:
       # https://biomejs.dev/internals/language-support/
       glob: "*.{js,ts,jsx,tsx,json,jsonc,css}"
       stage_fixed: true
+
 pre-push:
   parallel: true
   jobs:

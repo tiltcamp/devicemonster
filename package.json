@@ -2,6 +2,9 @@
 	"name": "devicemonster",
 	"devDependencies": {
 		"@biomejs/biome": "^2.0.6",
+		"@commitlint/cli": "^19.8.1",
+		"@commitlint/config-conventional": "^19.8.1",
+		"@commitlint/config-workspace-scopes": "^19.8.1",
 		"lefthook": "^1.11.16"
 	},
 	"private": true,
