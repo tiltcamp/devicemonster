@@ -13,5 +13,8 @@
 	"dependencies": {
 		"croner": "^9.1.0",
 		"execa": "^9.6.0"
+	},
+	"scripts": {
+		"build": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile devicemonster-agent"
 	}
 }
