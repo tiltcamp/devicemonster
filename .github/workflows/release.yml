@@ -82,7 +82,7 @@ jobs:
         run: bun install --frozen-lockfile
       - name: Build Agent
         working-directory: agent
-        run: bun build --compile --target bun-${{ matrix.target }}  --minify --sourcemap --bytecode ./index.ts --outfile devicemonster-agent-${{ matrix.target }}
+        run: bun build --compile --target bun-${{ matrix.target }}  --minify --sourcemap --bytecode ./src/index.ts --outfile devicemonster-agent-${{ matrix.target }}
       - name: Upload Release Artifact
         working-directory: agent
         env:
