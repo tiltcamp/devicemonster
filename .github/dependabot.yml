@@ -1,0 +1,34 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: ci
+      prefix-development: ci
+
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: build
+      prefix-development: build
+
+  - package-ecosystem: "bun"
+    directory: "/agent"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: fix(agent)
+      prefix-development: chore(agent)
+
+  - package-ecosystem: "bun"
+    directory: "/server"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: fix(server)
+      prefix-development: chore(server)
