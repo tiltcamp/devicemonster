@@ -14,6 +14,7 @@
     },
     "agent": {
       "name": "@devicemonster/agent",
+      "version": "0.0.0",
       "devDependencies": {
         "@types/bun": "latest",
       },
@@ -23,7 +24,7 @@
     },
     "server": {
       "name": "@devicemonster/server",
-      "version": "0.0.0",
+      "version": "0.0.1",
       "dependencies": {
         "@hookform/resolvers": "^4.1.0",
         "@radix-ui/react-label": "^2.1.2",
@@ -39,7 +40,7 @@
         "tailwind-merge": "^3.0.1",
         "tailwindcss": "^4.0.6",
         "tailwindcss-animate": "^1.0.7",
-        "zod": "^3.24.2",
+        "zod": "^3.25.76",
       },
       "devDependencies": {
         "@types/bun": "latest",
@@ -561,7 +562,7 @@
 
     "yocto-queue": ["yocto-queue@1.2.1", "", {}, "sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg=="],
 
-    "zod": ["zod@3.25.74", "", {}, "sha512-J8poo92VuhKjNknViHRAIuuN6li/EwFbAC8OedzI8uxpEPGiXHGQu9wemIAioIpqgfB4SySaJhdk0mH5Y4ICBg=="],
+    "zod": ["zod@3.25.76", "", {}, "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="],
 
     "@commitlint/format/chalk": ["chalk@5.4.1", "", {}, "sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w=="],
 
