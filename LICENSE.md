@@ -19,7 +19,7 @@ Copyright (c) 2025 TiltCamp, LLC
 
 ## Acceptance
 
-By using, copying, modifying, or distributing the Software, you accept and agree to be bound by the terms of this license. If you do not agree to these terms, you may not use, copy, modify, meerge, publish, or distribute the Software.
+By using, copying, modifying, or distributing the Software, you accept and agree to be bound by the terms of this license. If you do not agree to these terms, you may not use, copy, modify, merge, publish, or distribute the Software.
 
 ## Grant of Rights
 
