@@ -7,6 +7,7 @@ Usage: devicemonster-agent <command>
 Commands:
   install    Install the agent
   uninstall  Uninstall the agent
+  update     Update the agent
   help       Show this help message
 
 Run 'devicemonster-agent <command> --help' for more information on a specific command.
@@ -25,6 +26,14 @@ Usage: devicemonster-agent uninstall
 Uninstalls the DeviceMonster agent.
 
 This command removes the agent binary and uninstalls the service. Requires elevated privileges.
+`,
+	update: `
+Usage: devicemonster-agent update
+
+Updates the DeviceMonster agent to the latest version.
+
+This command checks for updates and applies them if available. If an update is available, elevated
+privileges are required to actually perform the update.
 `,
 };
 

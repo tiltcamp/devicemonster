@@ -5,6 +5,7 @@ import { getOsConfig } from "../config/os";
 import { helpCommand } from "./commands/help";
 import { installCommand } from "./commands/install";
 import { uninstallCommand } from "./commands/uninstall";
+import { updateCommand } from "./commands/update";
 
 export async function cli(): Promise<void> {
 	const command = parseArgs({
@@ -41,6 +42,11 @@ export async function cli(): Promise<void> {
 			"Agent is not installed. Please run the install command first.",
 		);
 		process.exit(1);
+	}
+
+	if (command === "update") {
+		await updateCommand();
+		process.exit(0);
 	}
 
 	helpCommand(command);
