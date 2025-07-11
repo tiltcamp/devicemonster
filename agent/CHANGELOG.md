@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/tiltcamp/devicemonster/compare/agent@v0.0.3...agent@v0.0.4) (2025-07-11)
+
+
+### Features
+
+* **agent:** add hidden `daemon` command ([8d2bdda](https://github.com/tiltcamp/devicemonster/commit/8d2bdda1e54428b4e5b87e738096b5ce043a9916))
+
 ## [0.0.3](https://github.com/tiltcamp/devicemonster/compare/agent@v0.0.2...agent@v0.0.3) (2025-07-11)
 
 
