@@ -19,7 +19,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=${process.execPath} --autostarted
+ExecStart=${process.execPath} daemon
 Restart=on-failure
 User=${user}
 

@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { isExecutablePathCorrect } from "../config/install";
 import { getOsConfig } from "../config/os";
+import { daemonCommand } from "./commands/daemon";
 import { helpCommand } from "./commands/help";
 import { installCommand } from "./commands/install";
 import { uninstallCommand } from "./commands/uninstall";
@@ -53,6 +54,11 @@ export async function cli(): Promise<void> {
 	if (command === "update") {
 		await updateCommand();
 		process.exit(0);
+	}
+
+	if (command === "daemon") {
+		await daemonCommand();
+		process.exit(1);
 	}
 
 	helpCommand(command);

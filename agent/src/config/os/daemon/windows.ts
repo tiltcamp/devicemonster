@@ -7,7 +7,7 @@ export async function installWindowsService(): Promise<void> {
 	);
 
 	const serviceName = "DeviceMonsterAgent";
-	const args = "--autostarted";
+	const args = "daemon";
 	const regPath = "HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run";
 	const command = `Set-ItemProperty -Path '${regPath}' -Name '${serviceName}' -Value '"${process.execPath}" ${args}'`;
 

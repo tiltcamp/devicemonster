@@ -23,7 +23,7 @@ export async function installLaunchAgent(
     <key>ProgramArguments</key>
     <array>
         <string>${process.execPath}</string>
-        <string>--autostarted</string>
+        <string>daemon</string>
     </array>
     <key>ProcessType</key>
     <string>Background</string>
