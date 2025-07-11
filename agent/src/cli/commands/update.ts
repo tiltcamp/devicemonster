@@ -74,7 +74,7 @@ export async function updateCommand(): Promise<void> {
 	const binaryPath = process.execPath;
 	await rm(`${binaryPath}.old`, { force: true });
 	await rename(binaryPath, `${binaryPath}.old`);
-	await writeFile(binaryPath, Buffer.from(binaryContents));
+	await writeFile(binaryPath, Buffer.from(binaryContents), { mode: 0o755 });
 	console.warn(chalk.blue("Update downloaded; restarting agent..."));
 	await getOsConfig().uninstallDaemonService();
 	await getOsConfig().installDaemonService();
