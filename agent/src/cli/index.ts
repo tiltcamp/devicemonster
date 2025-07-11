@@ -6,6 +6,7 @@ import { helpCommand } from "./commands/help";
 import { installCommand } from "./commands/install";
 import { uninstallCommand } from "./commands/uninstall";
 import { updateCommand } from "./commands/update";
+import { versionCommand } from "./commands/version";
 
 export async function cli(): Promise<void> {
 	const command = parseArgs({
@@ -34,6 +35,11 @@ export async function cli(): Promise<void> {
 		existsSync(await getOsConfig().agentExecutablePath())
 	) {
 		await uninstallCommand();
+		process.exit(0);
+	}
+
+	if (command === "version") {
+		versionCommand();
 		process.exit(0);
 	}
 
