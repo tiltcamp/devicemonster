@@ -16,19 +16,3 @@ updates:
     commit-message:
       prefix: build
       prefix-development: build
-
-  - package-ecosystem: "bun"
-    directory: "/agent"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: fix(agent)
-      prefix-development: chore(agent)
-
-  - package-ecosystem: "bun"
-    directory: "/server"
-    schedule:
-      interval: "daily"
-    commit-message:
-      prefix: fix(server)
-      prefix-development: chore(server)
