@@ -6,7 +6,7 @@
 		"@commitlint/config-conventional": "^19.8.1",
 		"@commitlint/config-workspace-scopes": "^19.8.1",
 		"@onebeyond/license-checker": "^2.1.0",
-		"lefthook": "^1.11.16"
+		"lefthook": "^1.12.2"
 	},
 	"private": true,
 	"scripts": {
