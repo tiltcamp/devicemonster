@@ -62,7 +62,7 @@ jobs:
           - linux-arm64-musl
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - id: tool-versions
         name: Get Tool Versions
         run: |
@@ -106,7 +106,7 @@ jobs:
           - linux-arm64-musl
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - id: tool-versions
         name: Get Tool Versions
         run: |
@@ -142,7 +142,7 @@ jobs:
     environment: Release
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - id: tool-versions
         name: Get Tool Versions
         run: |
